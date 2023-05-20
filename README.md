@@ -1,2 +1,2 @@
 # IWP_codes
-My learnings of Internet and Web Programming Course
+My learnings from Internet and Web Programming Course.
