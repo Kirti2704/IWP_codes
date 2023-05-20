@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function transpose() {
+            var rows = parseInt(document.getElementById("rows").value);
+            var columns = parseInt(document.getElementById("columns").value);
+            var matrix = [];
+            for (var i = 0; i < rows; i++) {
+                matrix[i] = [];
+                for (var j = 0; j < columns; j++) {
+                    matrix[i][j] = parseInt(
+                        prompt("Enter the element for row " + (i + 1) + " column " + (j + 1))
+                    );
+                }
+            }
+            var transposedMatrix = [];
+            for (var i = 0; i < columns; i++) {
+                transposedMatrix[i] = [];
+                for (var j = 0; j < rows; j++) {
+                    transposedMatrix[i][j] = matrix[j][i];
+                }
+            }
+            alert("The transposed matrix is: " + transposedMatrix);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="rows" placeholder="Enter number of rows">
+    <input type="text" id="columns" placeholder="Enter number of columns">
+    <button onClick="transpose()">Transpose</button>
+</body>
+
+</html>
